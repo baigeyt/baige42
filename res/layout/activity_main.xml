@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9cce31"
+    android:orientation="vertical" >
+
+    <!-- 广告viewpager -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+        <include layout="@layout/viewpager" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="880dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <!-- 学校简介 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:background="#09cc32" >
+
+            <include layout="@layout/introduce" />
+        </LinearLayout>
+
+        <!-- 实时拍照、图片展示 -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="715dp" >
+
+            <include layout="@layout/showphoto" />
+
+            <include layout="@layout/schoolinfo" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 底部信息栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#09cc32"
+                android:orientation="vertical" >
+
+                <com.tony.autoscroll.AutoScrollView
+                    android:id="@+id/auto_scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textNotice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="通知公告"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#ffffff"
+                            android:textSize="28sp" />
+                    </LinearLayout>
+                </com.tony.autoscroll.AutoScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3.0"
+                android:background="#09cc32"
+                android:orientation="vertical" >
+
+                <!-- 时间 -->
+
+                <TextView
+                    android:id="@+id/mytime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="时间时间"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp" />
+
+                <!-- 连接信息 -->
+
+                <TextView
+                    android:id="@+id/textConnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="@string/network_state"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/allcount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="刷卡数 : 0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/aaaa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="上传数 : 0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.8"
+            android:background="#09cc32" >
+
+            <TextView
+                android:id="@+id/textWeather"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                
+                android:text="天气预报"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000095"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
